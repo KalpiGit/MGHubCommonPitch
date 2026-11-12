@@ -1546,3 +1546,53 @@ h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
 .s-ways .why-socials .soc-row{grid-template-columns:repeat(6,minmax(0,1fr))}
 .s-ways .why-socials .soc-site{font-size:11px;font-weight:800;letter-spacing:.02em;text-transform:none;color:#1d3f75;text-decoration:none}
 .s-ways .why-socials .soc-site:hover{text-decoration:underline}
+/* globe centre: question instead of logo text */
+.globe-core .core-q{display:block;text-align:center;font-size:17px;font-weight:600;line-height:1.25;color:rgba(225,235,250,.92)}
+.globe-core .core-q b{display:inline-block;margin-top:2px;font-size:28px;font-weight:800;color:#fff;letter-spacing:-.01em}
+
+/* slide 2 contact row: simple left-aligned icon + text items, no cards */
+#s2 .why-people.reach-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:14px 40px;grid-template-columns:none}
+#s2 .reach-item{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font-size:13px;font-weight:500;white-space:nowrap}
+#s2 .reach-item b{font-weight:700;color:#1d4f9c}
+#s2 .reach-item .ic{width:34px;height:34px;border-radius:10px;background:linear-gradient(120deg,#0b1730,#1f4f99 80%,#2a6ad0);-webkit-mask:none;mask:none;position:relative;display:block;flex:none}
+#s2 .reach-item .ic:after{content:"";position:absolute;inset:0;background:#fff;-webkit-mask:var(--m) center/16px no-repeat;mask:var(--m) center/16px no-repeat}
+#s2 a.reach-item:hover b{text-decoration:underline}
+#s2 .reach-channels{gap:8px}
+#s2 .reach-channels>span{margin-right:4px;font-weight:700}
+#s2 .reach-channels .soc .ic{width:30px;height:30px;border-radius:9px}
+#s2 .reach-channels .soc .ic:after{-webkit-mask-size:14px;mask-size:14px}
+#s2 .reach-channels .soc:hover .ic{transform:scale(1.08)}
+
+/* reach row items in containers (navy metallic gradient, equal height, full width) */
+#s2 .why-people.reach-row{display:grid;grid-template-columns:1.15fr 1fr 1fr 1.25fr;gap:12px;align-items:stretch}
+#s2 .reach-item{padding:10px 14px;border-radius:14px;color:#fff;justify-content:flex-start;
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0) 45%),linear-gradient(120deg,#0b1730 0%,#14305c 45%,#1f4f99 80%,#2a6ad0 100%);
+  border:1px solid #3a5f92;box-shadow:0 14px 30px -22px rgba(10,25,55,.7)}
+#s2 .reach-item b{color:#bcd6ff}
+#s2 .reach-item .ic{background:rgba(255,255,255,.12)}
+#s2 .reach-item .ic:after{background:#e6efff}
+#s2 .reach-channels>span{color:#fff}
+#s2 .reach-channels .soc .ic{background:rgba(255,255,255,.12)}
+/* slimmer reach containers (top position unchanged) */
+#s2 .reach-item{padding:5px 12px;border-radius:12px}
+#s2 .reach-item .ic{width:28px;height:28px;border-radius:8px}
+#s2 .reach-item .ic:after{-webkit-mask-size:14px;mask-size:14px}
+#s2 .reach-channels .soc .ic{width:24px;height:24px;border-radius:7px}
+#s2 .reach-channels .soc .ic:after{-webkit-mask-size:12px;mask-size:12px}
+#s2 .reach-item{font-size:11.5px}
+#s2 .why-copy{grid-template-columns:1.05fr 1fr}
+/* Our channels — lighter blue container */
+#s2 .reach-channels{background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 50%),linear-gradient(120deg,#e6f0ff 0%,#c2dafc 50%,#94bcf4 100%);border-color:#8fb3e8;box-shadow:0 14px 30px -24px rgba(30,80,180,.5)}
+#s2 .reach-channels>span{color:#1d3f75}
+#s2 .reach-channels .soc .ic{background:rgba(29,63,117,.10)}
+#s2 .reach-channels .soc .ic:after{background:#1d3f75}
+/* contact containers: content-width, left aligned */
+#s2 .why-people.reach-row{display:flex;flex-wrap:nowrap;justify-content:flex-start;gap:12px}
+#s2 .reach-item{flex:none;padding-right:18px}
+/* even slimmer contact containers + double gap under heading */
+#s2 .why-contact-label{margin-bottom:12px}
+#s2 .reach-item{padding:3px 14px 3px 8px;font-size:10.5px;gap:8px;border-radius:10px}
+#s2 .reach-item .ic{width:24px;height:24px;border-radius:7px}
+#s2 .reach-item .ic:after{-webkit-mask-size:12px;mask-size:12px}
+#s2 .reach-channels .soc .ic{width:20px;height:20px;border-radius:6px}
+#s2 .reach-channels .soc .ic:after{-webkit-mask-size:10px;mask-size:10px}
