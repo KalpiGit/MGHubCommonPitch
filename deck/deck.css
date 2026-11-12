@@ -1264,11 +1264,10 @@ h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
 .s-ways .lead{white-space:nowrap}
 /* === partner strip: boxed minimal logo-wall (ref design) === */
 .s-hero .partner-strip{display:flex;align-items:stretch;max-width:none;margin-top:18px;
-  background:linear-gradient(135deg,#f8fbff 0%,#eef4fc 100%);
-  border:1px solid rgba(31,79,168,.12);border-radius:20px;padding:14px 22px;
-  position:relative;overflow:hidden}
-.s-hero .partner-strip:before{content:"";position:absolute;left:-70px;bottom:-90px;width:280px;height:190px;
-  background:radial-gradient(closest-side,rgba(80,140,235,.14),transparent 72%);pointer-events:none}
+  background:#f5f8fc;
+  border:1px solid #cbd8e9;border-left:3px solid #244e87;border-radius:10px;padding:14px 22px;
+  position:relative;overflow:hidden;box-shadow:none}
+.s-hero .partner-strip:before{display:none}
 .s-hero .ps-head{flex:none;border-right:1px solid rgba(31,111,224,.18);padding:6px 18px 6px 0;margin-right:22px;
   display:flex;flex-direction:column;justify-content:center;position:relative;z-index:1}
 .s-hero .ps-head span{display:block;font-weight:800;letter-spacing:-.02em;white-space:nowrap}
@@ -1278,9 +1277,7 @@ h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
 .s-hero .partner-strip-logos{flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:0;align-content:center;position:relative;z-index:1;
   background-image:
     linear-gradient(90deg,transparent calc(25% - .5px),rgba(31,111,224,.20) calc(25% - .5px),rgba(31,111,224,.20) calc(25% + .5px),transparent calc(25% + .5px)),
-    linear-gradient(90deg,transparent calc(75% - .5px),rgba(31,111,224,.20) calc(75% - .5px),rgba(31,111,224,.20) calc(75% + .5px),transparent calc(75% + .5px)),
-    linear-gradient(90deg,transparent calc(25% - 5px),rgba(140,180,255,.08) calc(25% - 5px),rgba(140,180,255,.08) calc(25% + 5px),transparent calc(25% + 5px)),
-    linear-gradient(90deg,transparent calc(75% - 5px),rgba(140,180,255,.08) calc(75% - 5px),rgba(140,180,255,.08) calc(75% + 5px),transparent calc(75% + 5px));
+    linear-gradient(90deg,transparent calc(75% - .5px),rgba(31,111,224,.20) calc(75% - .5px),rgba(31,111,224,.20) calc(75% + .5px),transparent calc(75% + .5px));
   background-repeat:no-repeat}
 .s-hero .partner-strip .partner-logo{height:auto;min-height:0;padding:10px 8px;border-right:0;
   background:none!important;box-shadow:none;transform:none!important;align-items:center;justify-content:center;position:relative;cursor:pointer}
@@ -1323,7 +1320,7 @@ h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
 .s-hero .om span{font-size:12.5px;line-height:1.4}
 .s-hero .partner-strip{margin-top:18px;max-width:none}
 .s-hero .hero-copy{margin-top:22px}
-.s-hero .leadership-band{margin-top:14px}
+.s-hero .leadership-band{margin-top:-4px}
 
 /* uniform subheadings — actual classes */
 .offer-mini-label,.partner-strip .strip-label{font-size:15px;font-weight:800;letter-spacing:.19em;text-transform:uppercase;color:var(--navy);margin:0 0 14px}
@@ -1430,3 +1427,122 @@ h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
 .s-merged .film-frame img{height:146px;max-width:260px}
 .s-merged .film-caption{display:none}
 .s-merged .social-footer{margin-top:6px}
+#s2{align-items:flex-start;padding-top:118px}
+#s2 > .wrap{transform:none}
+#s2 .why-grid{display:block}
+#s2 .why-copy{transform:none;display:grid;grid-template-columns:1.5fr 1fr;column-gap:30px}
+#s2 .why-copy .eyebrow{grid-column:1/-1;margin-bottom:8px}
+#s2 .why-h{font-size:clamp(28px,2.8vw,42px);grid-row:2/4}
+#s2 .why-copy .lead{margin-top:0;max-width:none}
+#s2 .why-stats{margin-top:12px}
+#s2 .event-gallery{height:auto;margin-top:16px}
+#s2 .filmstrip{height:260px;padding-top:12px;padding-bottom:12px}
+#s2 .film-frame{height:230px}
+#s2 .film-frame img{height:226px;width:auto;max-width:none;object-fit:contain}
+#s2 .social-footer{display:none}
+#s2 .why-contact{margin-top:12px}
+#s2 .why-people{display:grid;grid-template-columns:1fr 1fr 1.15fr 1.1fr;gap:10px;align-items:stretch}
+#s2 .why-person{padding:10px;gap:6px}
+#s2 .why-person strong{font-size:12px}
+#s2 .why-person span{font-size:9px}
+#s2 .why-links{gap:4px}
+#s2 .why-links a,#s2 .why-links .ic{width:26px;height:26px}
+#s4 .ways-head{margin-top:0;margin-bottom:14px}
+#s4 .ways-title{font-size:clamp(24px,2.2vw,32px)}
+#s4 .ways-head .eyebrow{margin-bottom:6px}
+#s4 .ways-head .lead{margin-top:8px;font-size:12px;max-width:none}
+.package-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.package-card{--package-accent:#2b63b6;padding:16px 18px;border:1px solid #b9cce7;border-top:3px solid var(--package-accent);border-radius:16px;background:linear-gradient(125deg,#f8fbff,#e1ebf9);min-width:0}
+.package-heading{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #7d9dc533}
+.package-heading h3{font-size:25px;color:#183d78}
+.package-heading>span{font-size:11px;color:#526b90}
+.signature-points,.premium-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(30px,auto);gap:6px 12px;list-style:none}
+.signature-points li,.premium-points li{display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.3;font-weight:600;color:#233b61;min-width:0}
+.signature-points .ic,.premium-points .ic{flex:none;width:24px;height:24px;border-radius:0;mask-size:19px;-webkit-mask-size:19px;background:var(--package-accent)}
+.signature-points li:last-child,.premium-points li:last-child{grid-column:1/-1;border-top:1px solid #7d9dc533;padding-top:8px;margin-top:2px}
+.package-premium{--package-accent:#e6bd65;background:linear-gradient(125deg,#0b1930,#193e70);border-color:#b49a61}
+.package-premium .package-heading{border-bottom-color:#d5b76b44}
+.package-premium .package-heading h3{color:#e6bd65}
+.package-premium .package-heading>span{color:#d9e5f7}
+.premium-points li{color:#e6edf8}
+.premium-points li:last-child{color:#edc773;border-top-color:#d5b76b44}
+#s4 .ways-grid{gap:14px;margin-top:16px}
+#s4 .way-card{padding:15px 17px}
+#s4 .way-card h3{font-size:20px;margin-bottom:10px}
+#s4 .way-card li{font-size:11px;line-height:1.35}
+#s4 .way-card ul{gap:7px}
+#s4 .way-note{margin-top:10px;padding-top:8px;font-size:10px}
+#s4 .ways-tail{margin-top:12px;font-size:11px}
+@media(max-width:900px){
+  #s2,#s4{height:auto;min-height:100vh;overflow:visible}
+  #s2 .why-copy,.package-grid{grid-template-columns:1fr}
+  #s2 .why-h{grid-row:auto}
+  #s2 .why-people{grid-template-columns:1fr 1fr}
+  #s4 .ways-head .lead{white-space:normal}
+}
+
+/* slides 2–3 fit + navy partner panel (approved preview) */
+/* shared top gap for slides 2 and 3: logo bottom = 78px; gap 18px -> 22px (+20%) */
+#s2,#s4{align-items:flex-start;padding-top:100px}
+#s2{padding-bottom:18px;padding-top:116px}
+#s4 .ways-head{margin-top:0}
+
+/* slide 2 fit: contacts pulled up, everything inside one screen */
+#s2 .why-copy .eyebrow{margin-bottom:6px}
+#s2 .event-gallery{margin-top:8px}
+#s2 .event-gallery-head{margin:0 0 4px}
+#s2 .filmstrip{height:clamp(170px,calc(100vh - 486px),384px);padding-top:6px;padding-bottom:6px}
+#s2 .film-frame{height:calc(clamp(170px,calc(100vh - 486px),384px) - 12px)}
+#s2 .film-frame img{height:calc(clamp(170px,calc(100vh - 486px),384px) - 14px)}
+#s2 .event-tabs{height:66px}
+/* the moved contact block inherits .s-ways padding-top:100px — cancel it */
+#s2 .why-contact{margin-top:18px;padding-top:0}
+#s2 .why-contact-label{margin-bottom:6px}
+#s2 .why-people{margin-top:0}
+#s2 .why-person{padding:8px 10px}
+
+/* slide 1: "What we offer" cards — dark metallic navy */
+.s-hero .om{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0) 45%),linear-gradient(120deg,#0b1730 0%,#14305c 45%,#1f4f99 80%,#2a6ad0 100%);border:1px solid #3a5f92}
+.s-hero .om b{color:#fff}
+.s-hero .om span{color:rgba(205,220,240,.8)}
+.s-hero .om .ic{background:rgba(255,255,255,.10)}
+.s-hero .om .ic:after{background:#9cc4ff}
+
+/* slide 2 timeline balls: still by default, no glow; slow bounce only while a photo is hovered */
+.s-partners-events .event-tab:before{animation:none!important;filter:none!important;
+  box-shadow:inset 0 1px 1px #fff,0 1px 3px rgba(18,34,63,.35)!important}
+.s-partners-events .event-tab.image-active:before{animation:ballBounceSlow 1.6s ease-in-out infinite!important}
+@keyframes ballBounceSlow{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-5px)}}
+
+/* slide 2 contact cards — gradient, matching the offer cards */
+#s2 .why-person.why-dark{background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,0) 45%),linear-gradient(120deg,#0b1730 0%,#14305c 45%,#1f4f99 80%,#2a6ad0 100%);border:1px solid #3a5f92}
+#s2 .why-socials{background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 50%),linear-gradient(120deg,#e6f0ff 0%,#c2dafc 50%,#94bcf4 100%);border:1px solid #8fb3e8}
+
+/* timeline line: sleek metallic, full width, fading out beyond first & last point */
+.s-partners-events .event-arc-svg{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 6.25%,#000 93.75%,transparent 100%)!important;mask-image:linear-gradient(90deg,transparent 0%,#000 6.25%,#000 93.75%,transparent 100%)!important}
+.s-partners-events .event-arc-svg .event-arc-line{stroke:url(#arcMetal)!important;stroke-width:1.6!important;stroke-linecap:round;fill:none;vector-effect:non-scaling-stroke;filter:none!important}
+
+/* slide 2: stats block a bit further left (right edge unchanged) */
+#s2 .why-copy{grid-template-columns:1.25fr 1fr}
+#s2 .why-copy .lead,#s2 .why-copy .why-stats{transform:translateY(-14px)}
+#s2 .why-contact{margin-top:34px}
+
+/* slide 3: subheading above the three models */
+#s4 .models-label{margin:24px 0 0;font-size:17px;font-weight:700;letter-spacing:-.01em;color:var(--navy)}
+#s4 .models-label+.ways-grid{margin-top:12px}
+#s4 .models-label{background:linear-gradient(100deg,#0e2246 0%,#3d5f8f 35%,#14305c 60%,#5a7aa8 85%,#0e2246 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;display:inline-block;padding-bottom:.08em}
+.ic-web{--m:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>')}
+.s-ways .why-socials .soc-row{grid-template-columns:repeat(7,minmax(0,1fr))}
+
+/* photo hover -> its timeline ball: slightly bigger, higher slow bounce; event label highlights */
+.s-partners-events .event-tab.image-active:before{animation:ballBounceHover 1.4s ease-in-out infinite!important}
+@keyframes ballBounceHover{0%,100%{transform:translateX(-50%) translateY(0) scale(1.22)}50%{transform:translateX(-50%) translateY(-10px) scale(1.22)}}
+.s-partners-events .event-tab small,.s-partners-events .event-tab span{transition:color .25s,transform .25s,font-weight .25s}
+.s-partners-events .event-tab.image-active span{font-weight:800;color:var(--navy);transform:translateY(-1px)}
+.s-partners-events .event-tab.image-active small{font-weight:800;color:#1f5fd0}
+
+/* uniform background on every slide (matches slide 3) */
+.slide,.slide:nth-child(even){background:var(--bg)!important}
+.s-ways .why-socials .soc-row{grid-template-columns:repeat(6,minmax(0,1fr))}
+.s-ways .why-socials .soc-site{font-size:11px;font-weight:800;letter-spacing:.02em;text-transform:none;color:#1d3f75;text-decoration:none}
+.s-ways .why-socials .soc-site:hover{text-decoration:underline}

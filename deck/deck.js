@@ -2,6 +2,11 @@
 const D = window.MG, $ = s => document.querySelector(s);
 const slides = [...document.querySelectorAll('.slide')];
 const deck = $('#deck');
+const contactBlock = $('.wc-s4');
+if (contactBlock) {
+  contactBlock.classList.add('s-ways');
+  $('#s2 > .wrap').appendChild(contactBlock);
+}
 const hashTarget = location.hash && document.querySelector(location.hash);
 if (hashTarget) setTimeout(() => hashTarget.scrollIntoView({ behavior: 'instant', block: 'start' }), 60);
 if (new URLSearchParams(location.search).has('flat')) {
@@ -106,6 +111,10 @@ eventSlide.insertAdjacentHTML('beforeend', '<aside class="event-focus-card" aria
 const eventFocusCard = eventSlide.querySelector('.event-focus-card');
 tabs.insertAdjacentHTML('afterbegin', `
   <svg class="event-arc-svg" viewBox="0 0 800 48" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="arcMetal" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="800" y2="0">
+      <stop offset="0" stop-color="#1b3358"/><stop offset=".22" stop-color="#7f9cc4"/><stop offset=".45" stop-color="#16294a"/>
+      <stop offset=".62" stop-color="#8aa7cd"/><stop offset=".82" stop-color="#1b3358"/><stop offset="1" stop-color="#6f8db6"/>
+    </linearGradient></defs>
     <path class="event-arc-glow"></path>
     <path class="event-arc-line"></path>
   </svg>`);
@@ -125,7 +134,7 @@ const arcPath = points => {
 };
 const setArcPeak = i => {
   const points = arcPoints(i);
-  const d = arcPath(points);
+  const d = `M 0 ${points[0].y} L 800 ${points[0].y}`;
   arcLine.setAttribute('d', d);
   arcGlow.setAttribute('d', d);
   eventButtons().forEach((button, j) => button.style.setProperty('--ball-y', points[j].y.toFixed(2)));
