@@ -1,0 +1,19 @@
+<!doctype html><meta charset="utf-8"><body>
+<iframe id="f" src="index.html?flat=1" style="width:1440px;height:900px;border:0"></iframe>
+<pre id="out">RUNNING</pre><script>
+const f=document.getElementById('f'),R=[];
+f.onload=()=>setTimeout(()=>{
+ const d=f.contentDocument,w=f.contentWindow;
+ d.querySelectorAll('.chip').forEach(c=>{
+  const img=c.querySelector('.chip-logo img');
+  const nm=c.title;
+  if(!img){R.push('BAD|'+nm+'|NO IMG');return}
+  const r=img.getBoundingClientRect(),cr=c.getBoundingClientRect();
+  const cs=w.getComputedStyle(img);
+  const vis=r.width>3&&r.height>3&&cs.display!=='none'&&parseFloat(cs.opacity)!==0;
+  const loaded=img.complete&&img.naturalWidth>0;
+  R.push((vis?'OK ':'BAD')+'|'+nm+'|img '+Math.round(r.width)+'x'+Math.round(r.height)+'|loaded:'+loaded);
+ });
+ document.getElementById('out').textContent=R.join('\n');
+},4000);
+</script>

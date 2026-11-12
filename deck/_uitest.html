@@ -1,0 +1,28 @@
+<!doctype html><meta charset="utf-8"><body>
+<iframe id="f" src="index.html?flat=1" style="width:1440px;height:900px;border:0"></iframe>
+<pre id="out">RUNNING</pre><script>
+const f=document.getElementById('f'),R=[];
+const ok=(n,p,d)=>R.push((p?'PASS':'FAIL')+' | '+n+(d?' | '+d:''));
+f.onload=()=>setTimeout(()=>{
+ try{
+  const d=f.contentDocument,w=f.contentWindow;
+  const slides=[...d.querySelectorAll('.slide')];
+  ok('slide count = 4',slides.length===4,slides.length+'');
+  const bad=[...d.images].filter(i=>!i.complete||i.naturalWidth===0);
+  ok('all images load',bad.length===0,bad.map(i=>i.src.split('/').pop()).join(','));
+  const vis=(sel)=>{const e=d.querySelector(sel);
+    if(!e)return false;const r=e.getBoundingClientRect(),cs=w.getComputedStyle(e);
+    return r.width>2&&r.height>2&&cs.display!=='none'&&cs.visibility!=='hidden'&&cs.opacity!=='0'};
+  ['#globe','.hero-q','.offer-mini-grid','.partner-strip-logos','.leadership-track','.lb-label',
+   '.event-tabs','.filmstrip','.film-arrow','.why-flow','.why-step','.ways-grid','.way-card','.wc-s4 .why-person']
+   .forEach(s=>ok(s+' visible',vis(s)));
+  ok('11 partner chips',d.querySelectorAll('.partner-strip .partner-logo').length===11,
+     d.querySelectorAll('.partner-strip .partner-logo').length+'');
+  ok('no leftover .plg masks',d.querySelectorAll('.plg').length===0);
+  ok('no mobileguild in text',!d.body.innerText.toLowerCase().includes('mobileguild'));
+  const lb=d.querySelector('.lb-label'),lbr=lb&&lb.getBoundingClientRect();
+  ok('ticker label on-screen',!!(lbr&&lbr.width>40),(lbr?Math.round(lbr.left)+','+Math.round(lbr.width):'none'));
+  document.getElementById('out').textContent=R.join('\n');
+ }catch(e){document.getElementById('out').textContent='ERR '+e.message+'\n'+R.join('\n')}
+},3500);
+</script>

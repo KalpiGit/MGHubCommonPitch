@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><body>
+<iframe id="f" src="index.html?flat=1#s2" style="width:1400px;height:900px"></iframe>
+<pre id="out"></pre><script>
+const f=document.getElementById('f');
+f.onload=()=>setTimeout(()=>{
+  const d=f.contentDocument,w=f.contentWindow,o=[];
+  const el=d.querySelector('.film-frame'),im=el.querySelector('img');
+  const r=el.getBoundingClientRect(),ri=im.getBoundingClientRect();
+  const cs=w.getComputedStyle(el),ci=w.getComputedStyle(im);
+  o.push('frame '+Math.round(r.width)+'x'+Math.round(r.height)+' h='+cs.height);
+  o.push('img '+Math.round(ri.width)+'x'+Math.round(ri.height)+' h='+ci.height+' mw='+ci.maxWidth+' of='+ci.objectFit);
+  o.push('filmstrip h='+w.getComputedStyle(d.querySelector('.filmstrip')).height);
+  document.getElementById('out').textContent=o.join('\n');
+},2500);
+</script>
