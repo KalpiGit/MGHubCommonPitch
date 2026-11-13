@@ -46,7 +46,6 @@ window.MG = {
     {n:"Appcircle", src:"assets/logos/appcircle-dark.svg", ch:"MG2"},
     {n:"Testinium", icon:"assets/logos/testinium-icon.svg", text:"Testinium", ch:"MG1"},
     {n:"Oobeya", icon:"assets/logos/oobeya-icon.svg", text:"oobeya", ch:"MG1"},
-    {n:"Melek", src:"assets/logos/melek-official.png", ch:"MG4"},
     {n:"MG Works", src:"assets/logos/mgworks.png"},
     {n:"MotoX", src:"assets/logos/motox-official.png", ch:"MG6"}
   ],
@@ -54,7 +53,7 @@ window.MG = {
     {id:"MG1", date:"19 Dec 2025", title:"Mobile Tech Leads UAE", venue:"Dubai Harbour", with:"Testinium & Oobeya", desc:"The first evening: technology leads from across the UAE, one room, honest conversations.", photos:["events/MG1-01","events/MG1-02"]},
     {id:"MG2", date:"6 Feb 2026", title:"Engineering at Scale", venue:"Arjaan by Rotana, Dubai Media City", with:"Appcircle", desc:"How the region's biggest apps build, test and ship at scale.", photos:["events/MG2-01"]},
     {id:"MG3", date:"27 Mar 2026", title:"Off the Record", venue:"Bluewaters, Dubai", with:"", desc:"An unfiltered peer evening. What was said in the room stayed in the room.", photos:["events/MG3-01","events/MG3-02"]},
-    {id:"MG4", date:"17 Apr 2026", title:"Hack Your Wellness", venue:"Bluewaters, Dubai", with:"Melek", desc:"Technology meets wellbeing for leaders who run on high performance.", photos:["events/MG4-01","events/MG4-02","events/MG4-03"]},
+    {id:"MG4", date:"17 Apr 2026", title:"Hack Your Wellness", venue:"Bluewaters, Dubai", with:"", desc:"Technology meets wellbeing for leaders who run on high performance.", photos:["events/MG4-01","events/MG4-02","events/MG4-03"]},
     {id:"MG5", date:"15 May 2026", title:"Data at the Core", venue:"Bluewaters, Dubai", with:"Couchbase", desc:"Modern data platforms powering real-time digital products.", photos:["events/MG5-01","events/MG5-03","events/MG5-06"]},
     {id:"MG6", date:"3 Jul 2026", title:"Play Mode", venue:"Dubai", with:"MotoX", desc:"Gaming, play and product thinking, with leaders trying it hands-on.", photos:["events/MG6-01","events/MG6-04","events/MG6-03"]},
     {id:"MG8", date:"4 Sep 2026", title:"Data & AI in Action", venue:"Google Office, Dubai", with:"Google Cloud & NGC", desc:"Live data and AI use cases at Google's Dubai office.", photos:["events/MG8-01","events/MG8-03","events/MG8-04"]},
