@@ -728,11 +728,11 @@ h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
   opacity:0;
   visibility:hidden;
   pointer-events:none;
-  transform:translate(-50%,-100%) scale(.92);
-  transform-origin:50% 100%;
+  transform:translate(-50%,0) scale(.92);
+  transform-origin:50% 0;
   transition:opacity .22s,visibility .22s,transform .28s
 }
-.event-focus-card.show{opacity:1;visibility:visible;transform:translate(-50%,-100%) scale(1)}
+.event-focus-card.show{opacity:1;visibility:visible;transform:translate(-50%,0) scale(1)}
 .event-focus-card small{display:block;color:#8fd8ea;font-size:9px;font-weight:700;line-height:1.35}
 .event-focus-card strong{display:block;margin:5px 0 4px;font-size:22px;line-height:1.05;letter-spacing:-.02em}
 .event-focus-card span{display:block;font-size:10px;line-height:1.48;color:rgba(255,255,255,.8)}

@@ -170,7 +170,9 @@ const setEvent = (i, scroll = false, reveal = false, mode = 'idle', targetFrame 
   const activeTab = eventButtons()[i];
   if (activeTab && reveal) {
     const r = activeTab.getBoundingClientRect();
+    const slideR = eventSlide.getBoundingClientRect();
     eventFocusCard.style.left = `${Math.max(150, Math.min(innerWidth - 150, r.left + r.width / 2))}px`;
+    eventFocusCard.style.top = `${r.bottom - slideR.top + 14}px`;
   }
   eventFocusCard.innerHTML = `
     <small>${c.date} · ${c.venue}</small>
