@@ -171,14 +171,19 @@ const setEvent = (i, scroll = false, reveal = false, mode = 'idle', targetFrame 
   if (activeTab && reveal) {
     const r = activeTab.getBoundingClientRect();
     const slideR = eventSlide.getBoundingClientRect();
-    eventFocusCard.style.left = `${Math.max(150, Math.min(innerWidth - 150, r.left + r.width / 2))}px`;
-    eventFocusCard.style.top = `${r.bottom - slideR.top + 14}px`;
+    eventFocusCard.style.left = `${Math.max(120, Math.min(innerWidth - 120, r.left + r.width / 2))}px`;
+    eventFocusCard.dataset.top = `${r.bottom - slideR.top + 14}`;
   }
   eventFocusCard.innerHTML = `
     <small>${c.date} · ${c.venue}</small>
     <strong>${c.title}</strong>
     <span>${c.desc}</span>
     <b>${c.with ? `With ${c.with}` : 'An MgHUB community evening'}</b>`;
+  if (eventFocusCard.dataset.top) {
+    const slideR = eventSlide.getBoundingClientRect();
+    const top = Math.min(+eventFocusCard.dataset.top, slideR.height - eventFocusCard.offsetHeight - 14);
+    eventFocusCard.style.top = `${Math.max(14, top)}px`;
+  }
   eventFocusCard.classList.toggle('show', reveal && mode === 'timeline');
   caption.textContent = `${c.date} · ${c.title} · ${c.venue}${c.with ? ` · With ${c.with}` : ''}`;
   if (scroll) {
